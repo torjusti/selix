@@ -15,9 +15,13 @@ Usage
 -----
 
 `selix.getCaret(elem)` will return an object containing `start` and `end` positions.
+
 `selix.setCaret(elem, start, end)` will set the selection
+
 `selix.getText(elem)` will return the currently highlighted text as a string.
+
 `selix.setText(elem, text)` will set the highligted text
+
 `selix.wrap(elem, before, after)` will wrap the selected text and select the contents
 
 Warning
@@ -27,7 +31,7 @@ In Internet Explorer the textarea must be focused for selix to work. However, wh
 
 The following snippet shows how to deal with this and also serves as an example for basic usage of selix - how to add a HTML tag.
 
-```
+```html
 <textarea id="post-stuff-here"></textarea>
 <span id="header-button" unselectable="on"></span>
 <script type="text/javascript">
