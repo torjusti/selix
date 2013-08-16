@@ -19,7 +19,7 @@ getCaret = (elem) ->
     # moveEnd does not work
     if elemRange.compareEndPoints('StartToEnd', endRange) >= 0
       start = end = elem.value.length
-    else 
+    else
       # moveStart and moveEnd returns how many characters it moved
       start = - elemRange.moveStart('character', - elem.value.length)
       # Check if the caret ends at the end of the text
@@ -65,13 +65,14 @@ wrap = (elem, before, after) ->
   startPosition = caret.start + before.length
   setCaret elem, startPosition, startPosition + text.length
 
-# Figure out if we export to Browserstack or the browser
-if typeof exports isnt 'undefined' then global = exports else global = window
-
-# Export selix to the global object
-global.selix =
+selix =
   getCaret: getCaret
   setCaret: setCaret
   getText: getText
   setText: setText
   wrap: wrap
+
+if typeof exports isnt 'undefined'
+  module.exports = selix
+else if typeof window isnt 'undefined'
+  window.selix = selix
