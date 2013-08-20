@@ -1,0 +1,49 @@
+body {
+  padding-top: 70px;
+  background: #F9F9F9;
+}
+
+.navbar-selix {
+  background: #764BAB;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-selix a {
+  color: #FFF;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.nav > li > a:hover, .nav > li > a:focus, .nav li.active > a {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.box {
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.box-huge {
+  font-size: 3em;
+}
+
+.box-large {
+  font-size: 2em;
+}
+
+.btn {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+#editor-message {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  resize: vertical;
+  background: #FFF;
+  border: 1px solid #CCC;
+  height: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>selix - the JavaScript text input selection library</title>
+    <meta name="description" value="A JavaScript library for manipulating the selection inside text input elements">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./dist/css/theme.css" rel="stylesheet">
+    <link href="./dist/css/pygments.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="navbar navbar-selix navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="index.html" class="navbar-brand">Selix</a>
+        </div>
+        <nav class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="demo.html">Demonstration</a></li>
+            <li class="active"><a href="docs.html">Documentation</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <h2>Warning</h2>
+      <p>Getting selections to work properly across all browsers is not an easy task. In order to make selix work properly across all browsers, selix requires you to make sure that the element is focused before performing a task. In Internet Explorer, this is not very simple. If you click an element in Internet Explorer, that element is focused and the textarea is blurred. To circumvent this, you have to tell Internet Explorer that the element is unselectable. Below is an example of how you can implement this.</p>
+      <pre><code>&lt;textarea id="post-stuff-here"&gt;&lt;/textarea&gt;
+&lt;span id="header-button" unselectable="on"&gt;Click here&lt;/span&gt;
+&lt;script type="text/javascript"&gt;
+var elem = document.getElementById('post-stuff-here');
+document.getElementById('header-button').onclick = function() {
+  elem.focus();
+  selix.wrap(elem, '&lt;h1&gt;', '&lt;/h1&gt;');
+};
+&lt;/script&gt;</code></pre>
+      <h2>Locating the caret positions</h2>
+      <pre><code>elem.focus();
+var caret = selix.getCaret(elem);
+console.log(caret.start, caret.end);</code></pre>
+      <h2>Setting the caret positions</h2>
+      <pre><code>elem.focus();
+selix.setCaret(textarea, 0, 5);</code></pre>
+      <h2>Get the selected text</h2>
+      <pre><code>elem.focus();
+console.log(selix.getText(elem));</code></pre>
+      <h2>Set the text selection</h2>
+      <pre><code>elem.focus();
+selix.setText(elem, 'Hello world');</code></pre>
+      <h2>Wrap the selected text</h2>
+      <pre><code>elem.focus();
+selix.wrap(elem, '&lt;h1&gt;', '&lt;/h1&gt;');</code></pre>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="./dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
