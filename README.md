@@ -1,6 +1,8 @@
 Selix - the JavaScript text input selection library
 ===================================================
 
+http://bilde.github.io/selix/index.html
+
 Get involved
 ------------
 
