@@ -32,7 +32,8 @@
     <div class="container">
       <h2>Warning</h2>
       <p>Getting selections to work properly across all browsers is not an easy task. In order to make selix work properly across all browsers, selix requires you to make sure that the element is focused before performing a task. In Internet Explorer, this is not very simple. If you click an element in Internet Explorer, that element is focused and the textarea is blurred. To circumvent this, you have to tell Internet Explorer that the element is unselectable. Below is an example of how you can implement this.</p>
-      <pre><code>&lt;textarea id="post-stuff-here"&gt;&lt;/textarea&gt;
+{% highlight html %}
+&lt;textarea id="post-stuff-here"&gt;&lt;/textarea&gt;
 &lt;span id="header-button" unselectable="on"&gt;Click here&lt;/span&gt;
 &lt;script type="text/javascript"&gt;
 var elem = document.getElementById('post-stuff-here');
@@ -40,23 +41,34 @@ document.getElementById('header-button').onclick = function() {
   elem.focus();
   selix.wrap(elem, '&lt;h1&gt;', '&lt;/h1&gt;');
 };
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;
+{% endhighlight %}
       <h2>Locating the caret positions</h2>
-      <pre><code>elem.focus();
+{% highlight js %}
+elem.focus();
 var caret = selix.getCaret(elem);
-console.log(caret.start, caret.end);</code></pre>
+console.log(caret.start, caret.end);
+{% endhighlight %}
       <h2>Setting the caret positions</h2>
-      <pre><code>elem.focus();
-selix.setCaret(textarea, 0, 5);</code></pre>
+{% highlight js %}
+elem.focus();
+selix.setCaret(textarea, 0, 5);
+{% endhighlight %}
       <h2>Get the selected text</h2>
-      <pre><code>elem.focus();
-console.log(selix.getText(elem));</code></pre>
+{% highlight js %}
+elem.focus();
+console.log(selix.getText(elem));
+{% endhighlight %}
       <h2>Set the text selection</h2>
-      <pre><code>elem.focus();
-selix.setText(elem, 'Hello world');</code></pre>
+{% highlight js %}
+elem.focus();
+selix.setText(elem, 'Hello world');
+{% endhighlight %}
       <h2>Wrap the selected text</h2>
-      <pre><code>elem.focus();
-selix.wrap(elem, '&lt;h1&gt;', '&lt;/h1&gt;');</code></pre>
+{% highlight js %}
+elem.focus();
+selix.wrap(elem, '&lt;h1&gt;', '&lt;/h1&gt;');
+{% endhighlight %}
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="./dist/js/bootstrap.min.js"></script>
