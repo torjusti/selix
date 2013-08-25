@@ -10,7 +10,7 @@ description: "Documentation for selix."
   <p>Getting selections to work properly across all browsers is not an easy task. In order to make selix work properly across all browsers, selix requires you to make sure that the element is focused before performing a task. In Internet Explorer, this is not very simple. If you click an element in Internet Explorer, that element is focused and the textarea is blurred. To circumvent this, you have to tell Internet Explorer that the element is unselectable. Below is an example of how you can implement this.</p>
 {% highlight html %}
 <textarea id="post-stuff-here"></textarea>
-<span id="header-button" unselectable="on">Click her</span>
+<span id="header-button" unselectable="on">Add heading</span>
 <script type="text/javascript">
 var elem = document.getElementById('post-stuff-here');
 document.getElementById('header-button').onclick = function() {
@@ -18,6 +18,11 @@ elem.focus();
 selix.wrap(elem, '<h1>', '</h1>');
 };
 </script>
+{% endhighlight %}
+  <h2>Installing</h2>
+  <p>Selix uses BrowserStack but reverts to using a global namespace if CommonJS does not work.</p>>
+{{% highligt html %}}
+var selix = require('selix');
 {% endhighlight %}
   <h2>Locating the caret positions</h2>
 {% highlight js %}
