@@ -1,7 +1,7 @@
 # selix - github.com/bilde - MIT License
 
 lineHandler = (elem, position) ->
-  position - (elem.value.slice(0, position).split('\r\n').length - 1)
+  elem.value.slice(0, position).split('\r\n').length - 1
 
 getCaret = (elem) ->
   if typeof elem.selectionStart is 'number' and typeof elem.selectionEnd is 'number'
@@ -22,12 +22,14 @@ getCaret = (elem) ->
     else
       # moveStart and moveEnd returns how many characters it moved
       start = - elemRange.moveStart('character', - elem.value.length)
+      start += lineHandler(elem, start)
       # Check if the caret ends at the end of the text
       if elemRange.compareEndPoints('EndToEnd', endRange) >= 0
         end = elem.value.length
       else
         # Finally we calculate the end position
         end = - elemRange.moveEnd('character', - elem.value.length)
+        end += lineHandler(elem, end)
     # Return the selection as an object
     start: start,
     end: end
@@ -42,8 +44,8 @@ setCaret = (elem, start, end = start) ->
     # Move the range to the start of the element
     range.collapse true
     # Move the positions to the place specified in characters
-    range.moveEnd 'character', lineHandler(elem, end)
-    range.moveStart 'character', lineHandler(elem, start)
+    range.moveEnd 'character', end - lineHandler(elem, end)
+    range.moveStart 'character', start - lineHandler(elem, start)
     # Select the range so that it is visible
     range.select()
 
