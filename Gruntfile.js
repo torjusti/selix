@@ -1,5 +1,4 @@
 module.exports = function(grunt) {
-
   grunt.initConfig({
     coffee: {
       compile: {
@@ -19,10 +18,7 @@ module.exports = function(grunt) {
       }
     }
   });
-
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-
   grunt.registerTask('default', ['coffee', 'uglify']);
-
 };
