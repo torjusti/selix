@@ -1,6 +1,17 @@
 body {
   padding-top: 70px;
   background: #F9F9F9;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+hr {
+  background: #A2D631;
+  height: 5px;
+  border: 0;
 }
 
 .navbar-selix {
@@ -17,18 +28,8 @@ body {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.box {
-  padding: 1em;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-}
-
-.box-huge {
-  font-size: 3em;
-}
-
-.box-large {
-  font-size: 2em;
+.icon-bar {
+  background: #FFF
 }
 
 .btn {
