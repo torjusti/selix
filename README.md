@@ -10,6 +10,9 @@ Get involved
 
 Selix is still very young and therefore bug reports are very much encouraged. Feel free to submit pull requests. Selix is built using grunt from the command line.
 
+    npm install
+    grunt
+
 License
 -------
 
