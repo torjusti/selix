@@ -1,7 +1,7 @@
 Selix - the JavaScript text input selection library
 ===================================================
 
-Selix is a lightweight and easy-to-use JavaScript library for manipulating the selection inside of user input elements. It helps you manipulate the selection inside of user inputs such as textareas and inputs and it is therefore very useful in cases such as text editors.
+Selix is a extremely tiny and easy-to-use JavaScript library for manipulating the selection inside of user input elements. It helps you manipulate the selection inside of user inputs such as textareas and inputs and it is therefore very useful in cases such as text editors.
 
 http://bilde.github.io/selix/index.html
 
