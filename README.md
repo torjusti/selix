@@ -8,7 +8,7 @@ Installing
 
     bower install selix
 
-    You can also manually download the file. `selix` also supports Browserify.
+You can also manually download the file. `selix` also supports Browserify.
     
 Documentation
 -------------
