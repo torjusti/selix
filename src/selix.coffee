@@ -74,6 +74,7 @@ selix =
   setText: setText
   wrap: wrap
 
+# Export to Node or window
 if typeof exports isnt 'undefined'
   module.exports = selix
 else if typeof window isnt 'undefined'
