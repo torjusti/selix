@@ -14,13 +14,13 @@ description: "Documentation for selix."
 <script type="text/javascript">
 var elem = document.getElementById('post-stuff-here');
 document.getElementById('header-button').onclick = function() {
-elem.focus();
-selix.wrap(elem, '<h1>', '</h1>');
+  elem.focus();
+  selix.wrap(elem, '<h1>', '</h1>');
 };
 </script>
 {% endhighlight %}
   <h2>Installing</h2>
-  <p>Selix uses BrowserStack but reverts to using a global namespace if CommonJS does not work. You can also install Selix using Bower.</p>
+  <p>Selix uses Browserify but reverts to using a global namespace if CommonJS does not work. You can also install Selix using Bower.</p>
 {% highlight js %}
 var selix = require('selix');
 {% endhighlight %}
