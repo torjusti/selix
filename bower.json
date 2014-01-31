@@ -16,9 +16,10 @@
     "url": "https://github.com/bilde/selix.git"
   },
   "devDependencies": {
-    "grunt": "0.4.x",
-    "grunt-contrib-coffee": "0.7.x",
-    "grunt-contrib-uglify": "0.2.x"
+    "gulp-uglify": "~0.2.0",
+    "gulp": "~3.5.0",
+    "gulp-coffee": "~1.4.0",
+    "gulp-rename": "~0.2.2"
   },
   "homepage": "https://github.com/Bilde/selix",
   "authors": [
