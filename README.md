@@ -8,7 +8,7 @@ Installing
 
     bower install selix
 
-You can also manually download the file. `selix` also supports Browserify.
+You can also manually download the file. `selix` also supports Browserify - it exports itself the node way if that is possible.
     
 Documentation
 -------------
@@ -18,10 +18,7 @@ http://bilde.github.io/selix/index.html
 Get involved
 ------------
 
-`selix` is still very young and therefore bug reports are very much encouraged. Feel free to submit pull requests. `selix` is built using grunt from the command line.
-
-    npm install
-    grunt
+`selix` is still very young and therefore bug reports are very much encouraged. Feel free to submit pull requests. `selix` is built using gulp from the command line: just run `gulp`
 
 License
 -------

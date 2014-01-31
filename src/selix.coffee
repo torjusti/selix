@@ -1,4 +1,4 @@
-# selix - github.com/bilde - MIT License
+### @license selix - github.com/bilde - MIT License ###
 
 lineHandler = (elem, position) ->
   elem.value.slice(0, position).split('\r\n').length - 1
