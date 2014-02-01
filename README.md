@@ -13,7 +13,7 @@ You can also manually download the file. `selix` also supports Browserify - it e
 Documentation
 -------------
 
-http://bilde.github.io/selix/index.html
+Make sure to read the documentation. You need to take special precautions for Internet Explorer: http://bilde.github.io/selix/index.html
 
 Get involved
 ------------
