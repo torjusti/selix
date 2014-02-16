@@ -9,7 +9,7 @@
     "range",
     "browser"
   ],
-  "bugs": "http://github.com/owner/project/issues",
+  "bugs": "http://github.com/bilde/selix/issues",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -21,9 +21,9 @@
     "gulp-coffee": "~1.4.0",
     "gulp-rename": "~0.2.2"
   },
-  "homepage": "https://github.com/Bilde/selix",
+  "homepage": "https://github.com/bilde/selix",
   "authors": [
-    "Bilde <torjusti@gmail.com>"
+    "bilde <torjusti@gmail.com>"
   ],
   "ignore": [
     "**/.*",
