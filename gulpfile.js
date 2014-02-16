@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var coffee = require('gulp-coffee');
 var rename = require('gulp-rename');
+var hint = require('gulp-jshint');
 
 gulp.task('default', function() {
   gulp.src('src/selix.coffee')
