@@ -55,9 +55,10 @@ getText = (elem) ->
   elem.value.slice(caret.start, caret.end)
 
 # Sets the selected text
-setText = (elem, text) ->
+setText = (elem, text, select) ->
   caret = getCaret elem
   elem.value = elem.value.slice(0, caret.start) + text + elem.value.slice(caret.end)
+  if select then setCaret(elem, caret.start, caret.start + text.length)
 
 # Wraps the selected text
 wrap = (elem, before, after) ->
