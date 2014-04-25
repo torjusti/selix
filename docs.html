@@ -28,28 +28,23 @@ bower install selix
 {% endhighlight %}
   <h2>Locating the caret positions</h2>
 {% highlight js %}
-elem.focus();
 var caret = selix.getCaret(elem);
 console.log(caret.start, caret.end);
 {% endhighlight %}
   <h2>Setting the caret positions</h2>
 {% highlight js %}
-elem.focus();
 selix.setCaret(textarea, 0, 5);
 {% endhighlight %}
   <h2>Get the selected text</h2>
 {% highlight js %}
-elem.focus();
 console.log(selix.getText(elem));
 {% endhighlight %}
   <h2>Set the text selection</h2>
 {% highlight js %}
-elem.focus();
 selix.setText(elem, 'Hello world');
 {% endhighlight %}
   <h2>Wrap the selected text</h2>
 {% highlight js %}
-elem.focus();
 selix.wrap(elem, '<h1>', '</h1>');
 {% endhighlight %}
 </div>
