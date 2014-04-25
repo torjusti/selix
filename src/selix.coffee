@@ -4,6 +4,7 @@ lineHandler = (elem, position) ->
   elem.value.slice(0, position).split('\r\n').length - 1
 
 getCaret = (elem) ->
+  elem.focus();
   if typeof elem.selectionStart is 'number' and typeof elem.selectionEnd is 'number'
     start: elem.selectionStart,
     end: elem.selectionEnd
@@ -35,6 +36,7 @@ getCaret = (elem) ->
     end: end
 
 setCaret = (elem, start, end = start) ->
+  elem.focus();
   if typeof elem.selectionStart is 'number' and typeof elem.selectionEnd is 'number'
     elem.selectionStart = start
     elem.selectionEnd = end
