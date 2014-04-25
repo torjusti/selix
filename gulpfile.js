@@ -11,3 +11,7 @@ gulp.task('default', function() {
     .pipe(uglify({preserveComments: 'some'}))
     .pipe(gulp.dest('lib'))
 });
+
+gulp.task('watch', function() {
+  gulp.watch('src/default.coffee', ['default']);
+});
